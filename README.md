@@ -21,7 +21,7 @@ in the Irken distribution.
 Input Format
 ------------
 
-Sample input file for `stdio`:
+Sample input file for `brotli`:
 
     ;; -*- Mode: lisp -*-
     
@@ -55,11 +55,12 @@ Sample input file for `stdio`:
 
 The first symbol gives a name to the interface, in this case `brotli`. Then:
 
-  * `includes` lists the C API `.h` file[s].
+  * `includes`: lists the C API `.h` file[s].
   * `cflags`, `lflags`: compile and link flags for `CC`.
-  * `structs` lists the structures you need to know about. [you need not list opaque types here]
-  * `constants` integer values you need (usually from `#define`).
-  * `sigs` functions whose signatures you need.
+  * `structs`: lists the structures you need to know about. [you need not list opaque types here]
+  * `enums`: C enums (typedef or not) containing values you need.
+  * `constants`: integer values you need (usually from `#define`).
+  * `sigs`: functions whose signatures you need.
 
 Building
 --------
